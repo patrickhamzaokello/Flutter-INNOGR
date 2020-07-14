@@ -1,21 +1,13 @@
-import 'package:flutter/material.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-class Messages extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Main();
-  }
-}
+@JsonSerializable()
+class Message {
+  final String subject;
+  final String body;
 
-/// This is the stateless widget that the main application instantiates.
-class Main extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Messages'),
-      ),
-      body: Center(child: Text('See your messages here!')),
-    );
-  }
+  Message(this.subject, this.body);
+
+  Message.fromJson(Map<String, dynamic> json)
+      : subject = json['subject'],
+        body = json['body'];
 }
