@@ -30,9 +30,7 @@ dependencies:
   url_launcher: ^5.4.0
   css_colors: ^1.0.0
   flutter_svg: ^0.17.4
-  photo_view: ^0.3.1
   http: ^0.12.0+1
-  email_validator: ^1.0.0
   provider: ^4.0.4
   flutter_launcher_icons: "^0.7.0"
   font_awesome_flutter: ^8.8.1
